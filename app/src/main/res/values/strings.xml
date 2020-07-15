@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CurrencyConverterUpdate</string>
+    <string-array name="currency">
+        <item>USD</item>
+        <item>JPY</item>
+        <item>VND</item>
+        <item>AUD</item>
+    </string-array>
+</resources>
