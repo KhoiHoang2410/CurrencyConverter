@@ -8,13 +8,20 @@ import android.widget.Button;
 public class numpad extends View implements View.OnClickListener {
     //UI ui = null;
 
-    public numpad(Context context) {
+    View _parentView;
+    public numpad(Context context, View parentView) {
         super(context);
+        _parentView = parentView;
+
         //ui = new UI(context);
     }
 
     public void numpadListener() {
-        Button num00 = (Button)findViewById(R.id.Num00);
+
+// You need to call findViewByID from an parentView.
+// Since your button is an element of the main activity view hierarchy (parentView).
+// this.findViewById is call by numpad itself, but it do not have any children or elements in it view hierarchy.
+        Button num00 = (Button)_parentView.findViewById(R.id.Num00);
         num00.setOnClickListener(this);
 
         /*Button num01 = (Button)findViewById(R.id.Num01);
